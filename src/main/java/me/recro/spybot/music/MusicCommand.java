@@ -190,7 +190,7 @@ public class MusicCommand extends Command {
                         } else {
                             loadTrack(input, e.getMember(), e.getMessage(), chat);
                         }
-                        break;
+                        break;//change
                 }
                 break;
         }
