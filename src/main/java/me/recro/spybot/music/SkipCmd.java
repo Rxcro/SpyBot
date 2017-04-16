@@ -69,7 +69,7 @@ public class SkipCmd extends Command {
 
     @Override
     public List<String> getAlias() {
-        return Collections.singletonList("music");
+        return Collections.singletonList("skip");
     }
 
     @Override

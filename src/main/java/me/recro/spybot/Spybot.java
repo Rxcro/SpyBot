@@ -4,6 +4,7 @@ package me.recro.spybot;
 import me.recro.spybot.commands.fun.TestCmd;
 import me.recro.spybot.music.MusicCommand;
 import me.recro.spybot.music.PlayCmd;
+import me.recro.spybot.music.SkipCmd;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -20,7 +21,8 @@ public final class Spybot  {
             discord = new JDABuilder(AccountType.BOT).setToken(discordToken).buildBlocking();
             discord.addEventListener(new TestCmd());
             discord.addEventListener(new MusicCommand());
-            discord.addEventListener(new PlayCmd());
+//            discord.addEventListener(new PlayCmd());
+//            discord.addEventListener(new SkipCmd());
         } catch (LoginException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

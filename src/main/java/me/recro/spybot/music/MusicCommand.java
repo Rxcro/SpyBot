@@ -313,8 +313,8 @@ public class MusicCommand extends Command {
 
     private void sendHelpMessage(MessageSender chat) {
         chat.sendEmbed("SpyBot Music", MessageUtil.stripFormatting(Info.PREFIX) + "music\n"
-                + "         -> play [url]           - Load a song or a playlist\n"
-                + "         -> ytplay [query]  - Search YouTube for a video and load it\n"
+                + "         -> play [query]           - Load a song or a playlist\n"
+                + "         -> ytplay [url]  - Search YouTube for a video and load it\n"
                 + "         -> queue                 - View the current queue\n"
                 + "         -> skip                     - Cast a vote to skip the current track\n"
                 + "         -> current               - Display info related to the current track\n"
