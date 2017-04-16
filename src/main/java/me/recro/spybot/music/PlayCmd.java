@@ -44,8 +44,7 @@ public class PlayCmd extends Command {
 
     @Override
     public void executeCommand(String[] args, MessageReceivedEvent e, MessageSender chat) {
-
-        String input = String.join(" ", Arrays.copyOfRange(args, 0, args.length));
+            String input = String.join(" ", Arrays.copyOfRange(args, 0, args.length));
             input="ytsearch: " + input;
             loadTrack(input, e.getMember(), e.getMessage(), chat);
     }

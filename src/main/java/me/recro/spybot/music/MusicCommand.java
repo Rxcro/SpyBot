@@ -95,7 +95,7 @@ public class MusicCommand extends Command {
 
                             if (sb.length() <= 1960) {
                                 chat.sendEmbed(embedTitle, "**>** " + sb.toString());
-                            } else /* if (sb.length() <= 20000) */ {
+                            } else {
                                 try {
                                     sb.setLength(sb.length() - 1);
                                     HttpResponse<String> response = Unirest.post("https://hastebin.com/documents").body(sb.toString()).asString();
@@ -104,20 +104,6 @@ public class MusicCommand extends Command {
                                 } catch (UnirestException ex) {
                                     ex.printStackTrace();
                                 }
-                                /*
-                            } else {
-                                e.getChannel().sendTyping().queue();
-                                File qFile = new File("queue.txt");
-                                try {
-                                    FileUtils.write(qFile, sb.toString(), "UTF-8", false);
-                                    e.getChannel().sendFile(qFile, qFile.getName(), null).queue();
-                                } catch (IOException ex) {
-                                    ex.printStackTrace();
-                                }
-                                if (!qFile.delete()) { // Delete the queue file after we're done
-                                    qFile.deleteOnExit();
-                                }
-                                */
                             }
                         }
                         break;
@@ -182,12 +168,12 @@ public class MusicCommand extends Command {
                 switch (args[0].toLowerCase()) {
                     case "play": // Query YouTube for a music video
                         input = "ytsearch: " + input;
-                        // no break;
+                        loadTrack(input, e.getMember(), e.getMessage(), chat);
                     case "ytplay": // Play a track
                         if (args.length <= 1) {
                             chat.sendMessage("Please include a valid source.");
                         } else {
-                            loadTrack(input, e.getMember(), e.getMessage(), chat);
+                         //   loadTrack(input, e.getMember(), e.getMessage(), chat);
                         }
                     break;
                 }
