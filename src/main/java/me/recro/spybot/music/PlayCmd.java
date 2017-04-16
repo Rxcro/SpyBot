@@ -4,6 +4,7 @@ import com.sedmelluq.discord.lavaplayer.player.AudioLoadResultHandler;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
 import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
+import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
 import com.sedmelluq.discord.lavaplayer.tools.FriendlyException;
 import com.sedmelluq.discord.lavaplayer.track.AudioPlaylist;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
@@ -42,11 +43,15 @@ public class PlayCmd extends Command {
     private static final String QUEUE_INFO = "Info about the Queue: (Size - %d)";
     private static final String ERROR = "Error while loading \"%s\"";
 
+    public PlayCmd() {
+        AudioSourceManagers.registerRemoteSources(myManager);
+    }
+
     @Override
     public void executeCommand(String[] args, MessageReceivedEvent e, MessageSender chat) {
-            String input = String.join(" ", Arrays.copyOfRange(args, 0, args.length));
-            input="ytsearch: " + input;
-            loadTrack(input, e.getMember(), e.getMessage(), chat);
+        String input = String.join(" ", Arrays.copyOfRange(args, 0, args.length));
+                input = "ytsearch: " + input;
+                loadTrack(input, e.getMember(), e.getMessage(), chat);
     }
 
     @Override

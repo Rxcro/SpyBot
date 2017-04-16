@@ -168,12 +168,12 @@ public class MusicCommand extends Command {
                 switch (args[0].toLowerCase()) {
                     case "play": // Query YouTube for a music video
                         input = "ytsearch: " + input;
-                        loadTrack(input, e.getMember(), e.getMessage(), chat);
+                        //loadTrack(input, e.getMember(), e.getMessage(), chat);
                     case "ytplay": // Play a track
                         if (args.length <= 1) {
                             chat.sendMessage("Please include a valid source.");
                         } else {
-                         //   loadTrack(input, e.getMember(), e.getMessage(), chat);
+                        loadTrack(input, e.getMember(), e.getMessage(), chat);
                         }
                     break;
                 }
