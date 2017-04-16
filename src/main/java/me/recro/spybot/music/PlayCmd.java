@@ -45,33 +45,9 @@ public class PlayCmd extends Command {
     @Override
     public void executeCommand(String[] args, MessageReceivedEvent e, MessageSender chat) {
 
-        String input = String.join(" ", Arrays.copyOfRange(args, 1, args.length));
-
-        /*switch (args[0].toLowerCase()) {
-            case "play": // Query YouTube for a music video
-                input = "ytsearch: " + input;
-                // no break;
-
-            case "ytplay": // Play a track
-                if (args.length <= 1) {
-                    chat.sendMessage("Please include a valid source.");
-                } else {
-                    loadTrack(input, e.getMember(), e.getMessage(), chat);
-                }
-                break;
-        } */
-
-        switch (args.length) {
-            case 0:
-                input="ytsearch: " + input;
-        }
-
-       /* String input = String.join(" ", Arrays.copyOfRange(args, 1, args.length));
-        if (args.length <= 1) {
-            chat.sendMessage("Please include a valid source.");
-        } else {
+        String input = String.join(" ", Arrays.copyOfRange(args, 0, args.length));
+            input="ytsearch: " + input;
             loadTrack(input, e.getMember(), e.getMessage(), chat);
-        } */
     }
 
     @Override

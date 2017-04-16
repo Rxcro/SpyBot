@@ -183,14 +183,13 @@ public class MusicCommand extends Command {
                     case "play": // Query YouTube for a music video
                         input = "ytsearch: " + input;
                         // no break;
-
                     case "ytplay": // Play a track
                         if (args.length <= 1) {
                             chat.sendMessage("Please include a valid source.");
                         } else {
                             loadTrack(input, e.getMember(), e.getMessage(), chat);
                         }
-                    break;//changed
+                    break;
                 }
                 break;
         }
