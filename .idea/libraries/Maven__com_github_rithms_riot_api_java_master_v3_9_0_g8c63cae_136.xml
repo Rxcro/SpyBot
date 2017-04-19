@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.rithms:riot-api-java:master-v3.9.0-g8c63cae-136">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/rithms/riot-api-java/master-v3.9.0-g8c63cae-136/riot-api-java-master-v3.9.0-g8c63cae-136.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/rithms/riot-api-java/master-v3.9.0-g8c63cae-136/riot-api-java-master-v3.9.0-g8c63cae-136-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/rithms/riot-api-java/master-v3.9.0-g8c63cae-136/riot-api-java-master-v3.9.0-g8c63cae-136-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
